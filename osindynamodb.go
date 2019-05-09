@@ -5,9 +5,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/RangelReale/osin"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/rraulinio/osin"
 )
 
 var (
@@ -31,7 +31,7 @@ func New(db *dynamodb.DynamoDB, config StorageConfig) *Storage {
 	}
 }
 
-// Storage implements the storage interface for OSIN (https://github.com/RangelReale/osin)
+// Storage implements the storage interface for OSIN (https://github.com/rraulinio/osin)
 // with Amazon DynamoDB (https://aws.amazon.com/dynamodb/)
 // using aws-sdk-go (https://github.com/aws/aws-sdk-go).
 type Storage struct {
